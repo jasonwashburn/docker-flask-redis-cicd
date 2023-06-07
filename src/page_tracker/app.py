@@ -1,4 +1,5 @@
 from functools import cache
+import os
 
 from flask import Flask
 from redis import Redis, RedisError
@@ -19,4 +20,5 @@ def index():
 
 @cache
 def redis():
-    return Redis()
+    redis_url = os.getenv("REDIS_URL", "redis://localhost:6379")
+    return Redis.from_url(redis_url)

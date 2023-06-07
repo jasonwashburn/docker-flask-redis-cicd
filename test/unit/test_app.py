@@ -1,6 +1,6 @@
-
 import unittest.mock as mock
 from redis import ConnectionError
+
 
 @mock.patch("page_tracker.app.redis")
 def test_should_call_redis_incr(mock_redis, http_client):
@@ -14,6 +14,7 @@ def test_should_call_redis_incr(mock_redis, http_client):
     assert response.status_code == 200
     assert response.text == "This page has been seen 5 times."
     mock_redis.return_value.incr.assert_called_once_with("page_views")
+
 
 @mock.patch("page_tracker.app.redis")
 def test_should_return_error_when_redis_is_unavailable(mock_redis, http_client):
