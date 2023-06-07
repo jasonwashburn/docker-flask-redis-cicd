@@ -1,5 +1,6 @@
 import pytest
 import redis
+
 from page_tracker.app import app
 
 

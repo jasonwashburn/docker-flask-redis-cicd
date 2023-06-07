@@ -1,4 +1,5 @@
 import unittest.mock as mock
+
 from redis import ConnectionError
 
 

@@ -1,5 +1,5 @@
-from functools import cache
 import os
+from functools import cache
 
 from flask import Flask
 from redis import Redis, RedisError

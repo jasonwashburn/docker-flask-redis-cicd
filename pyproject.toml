@@ -8,4 +8,13 @@ version = "1.0.0"
 dependencies = ["Flask", "redis"]
 
 [project.optional-dependencies]
-dev = ["pytest", "pytest-timeout", "requests"]
+dev = [
+    "bandit",
+    "black",
+    "flake8",
+    "isort",
+    "pylint",
+    "pytest",
+    "pytest-timeout",
+    "requests",
+]
