@@ -27,4 +27,4 @@ def test_should_return_error_when_redis_is_unavailable(mock_redis, http_client):
 
     # Then
     assert response.status_code == 500
-    assert response.text == "Sorry, something went wrong \N{pensive face}"
+    assert response.text == "Sorry, something went wrong \N{thinking face}"
